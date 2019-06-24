@@ -1,13 +1,13 @@
 package education;
 
 /**
- * Hello world!
+ * Iterate through an array
  *
  */
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        for(int i=0; i<=args.length-1; i++){System.out.println(args[i]);}
     }
 }
