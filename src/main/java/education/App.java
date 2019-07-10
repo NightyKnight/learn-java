@@ -1,7 +1,7 @@
 package education;
 
 /**
- * Create a new student and print out a few stats
+ * Create a new course and add a some students
  *
  */
 public class App 
@@ -16,8 +16,30 @@ public class App
         john.GPA = 2.5f;
         john.homeAddress = "1 Direwolf Lane, Winterfell, Westeros";
 
-        System.out.println("Name: "+john.firstName+" "+john.lastName);
-        System.out.println("Student ID: "+john.studentID);
-        System.out.println("GPA: "+john.GPA);
+        Student sansa = new Student();
+
+        sansa.firstName = "Sansa";
+        sansa.lastName = "Stark";
+        sansa.studentID = 222;
+        sansa.GPA = 3.5f;
+        sansa.homeAddress = "1 Direwolf Lane, Winterfell, Westeros";
+
+        Course english = new Course();
+
+        english.courseName = "English 101";
+        english.courseNumber = "ENG101";
+        english.schedule = "MWF 10AM-12PM";
+        english.enrolled[0] = john;
+        english.enrolled[1] = sansa;
+
+        //System.out.println("Name: "+john.firstName+" "+john.lastName);
+        //System.out.println("Student ID: "+john.studentID);
+        //System.out.println("GPA: "+john.GPA);
+        System.out.println("Course: "+english.courseName);
+        System.out.println("Course Number: "+english.courseNumber);
+        System.out.println("Schedule: "+english.schedule);
+        System.out.println("Enrolled Students: ");
+        System.out.println(english.enrolled[0].studentID);
+        System.out.println(english.enrolled[1].studentID);
     }
 }
