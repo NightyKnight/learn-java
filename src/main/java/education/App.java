@@ -15,6 +15,7 @@ public class App
         john.studentID = 111;
         john.GPA = 2.5f;
         john.homeAddress = "1 Direwolf Lane, Winterfell, Westeros";
+        System.out.println(john.fullName);
 
         Student sansa = new Student();
 
@@ -32,14 +33,11 @@ public class App
         english.enrolled[0] = john;
         english.enrolled[1] = sansa;
 
-        //System.out.println("Name: "+john.firstName+" "+john.lastName);
-        //System.out.println("Student ID: "+john.studentID);
-        //System.out.println("GPA: "+john.GPA);
         System.out.println("Course: "+english.courseName);
         System.out.println("Course Number: "+english.courseNumber);
         System.out.println("Schedule: "+english.schedule);
         System.out.println("Enrolled Students: ");
-        System.out.println(english.enrolled[0].studentID);
-        System.out.println(english.enrolled[1].studentID);
+        System.out.println(english.enrolled[0].studentID+" "+john.combineName());
+        System.out.println(english.enrolled[1].studentID+" "+sansa.combineName());
     }
 }
