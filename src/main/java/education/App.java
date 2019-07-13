@@ -15,7 +15,6 @@ public class App
         john.studentID = 111;
         john.GPA = 2.5f;
         john.homeAddress = "1 Direwolf Lane, Winterfell, Westeros";
-        System.out.println(john.fullName);
 
         Student sansa = new Student();
 
@@ -27,6 +26,7 @@ public class App
 
         Course english = new Course();
 
+        //Add Students to course
         english.courseName = "English 101";
         english.courseNumber = "ENG101";
         english.schedule = "MWF 10AM-12PM";
@@ -37,7 +37,9 @@ public class App
         System.out.println("Course Number: "+english.courseNumber);
         System.out.println("Schedule: "+english.schedule);
         System.out.println("Enrolled Students: ");
-        System.out.println(english.enrolled[0].studentID+" "+john.combineName());
+        //Better way to combine names, as it can be used programatically
+        System.out.println(english.enrolled[0].studentID+" "+english.enrolled[0].combineName());
+        //Only good if printing a few objects
         System.out.println(english.enrolled[1].studentID+" "+sansa.combineName());
     }
 }

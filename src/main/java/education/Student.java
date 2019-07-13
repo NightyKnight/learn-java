@@ -7,8 +7,8 @@ public class Student {
     float GPA;
     String homeAddress;
 
-        public static String combineName(String firstName,String lastName){
-                String fullName = this.firstName+" "+this.lastName;
+        public String combineName(){
+                String fullName = firstName+" "+lastName;
                 return fullName;
     }
 }
