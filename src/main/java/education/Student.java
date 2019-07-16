@@ -6,4 +6,9 @@ public class Student {
     int studentID;
     float GPA;
     String homeAddress;
+
+        public String combineName(){
+                String fullName = firstName+" "+lastName;
+                return fullName;
+    }
 }

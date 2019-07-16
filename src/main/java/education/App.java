@@ -26,20 +26,20 @@ public class App
 
         Course english = new Course();
 
+        //Add Students to course
         english.courseName = "English 101";
         english.courseNumber = "ENG101";
         english.schedule = "MWF 10AM-12PM";
         english.enrolled[0] = john;
         english.enrolled[1] = sansa;
 
-        //System.out.println("Name: "+john.firstName+" "+john.lastName);
-        //System.out.println("Student ID: "+john.studentID);
-        //System.out.println("GPA: "+john.GPA);
         System.out.println("Course: "+english.courseName);
         System.out.println("Course Number: "+english.courseNumber);
         System.out.println("Schedule: "+english.schedule);
         System.out.println("Enrolled Students: ");
-        System.out.println(english.enrolled[0].studentID);
-        System.out.println(english.enrolled[1].studentID);
+        //Better way to combine names, as it can be used programatically
+        System.out.println(english.enrolled[0].studentID+" "+english.enrolled[0].combineName());
+        //Only good if printing a few objects
+        System.out.println(english.enrolled[1].studentID+" "+sansa.combineName());
     }
 }
