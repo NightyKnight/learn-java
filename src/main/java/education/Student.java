@@ -10,5 +10,11 @@ public class Student {
         public String combineName(){
                 String fullName = firstName+" "+lastName;
                 return fullName;
+        }
+
+        //Override the default toString method to format the Student object for printing
+        @Override
+        public String toString() {
+            return studentID + "\t" + combineName() + "\n";
     }
 }

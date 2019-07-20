@@ -1,8 +1,10 @@
 package education;
 
+import java.util.LinkedList;
+
 public class Course {
     String courseName;
     String courseNumber;
     String schedule;
-    Student[] enrolled = new Student[10];
+    LinkedList<Student> enrolled = new LinkedList<>();
 }

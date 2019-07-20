@@ -2,12 +2,9 @@ package education;
 
 /**
  * Create a new course and add a some students
- *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
+public class App {
+    public static void main(String[] args) {
         Student john = new Student();
 
         john.firstName = "John";
@@ -30,16 +27,18 @@ public class App
         english.courseName = "English 101";
         english.courseNumber = "ENG101";
         english.schedule = "MWF 10AM-12PM";
-        english.enrolled[0] = john;
-        english.enrolled[1] = sansa;
+        english.enrolled.add(john);
+        english.enrolled.add(sansa);
 
-        System.out.println("Course: "+english.courseName);
-        System.out.println("Course Number: "+english.courseNumber);
-        System.out.println("Schedule: "+english.schedule);
+        //Print out the results
+        System.out.println("Course: " + english.courseName);
+        System.out.println("Course Number: " + english.courseNumber);
+        System.out.println("Schedule: " + english.schedule);
         System.out.println("Enrolled Students: ");
-        //Better way to combine names, as it can be used programatically
-        System.out.println(english.enrolled[0].studentID+" "+english.enrolled[0].combineName());
-        //Only good if printing a few objects
-        System.out.println(english.enrolled[1].studentID+" "+sansa.combineName());
+
+            //Use enhanced for loop to iterate and print out all of the students
+            for (Student i : english.enrolled) {
+                System.out.print(i);
+            }
     }
 }
